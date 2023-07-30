@@ -1,0 +1,4 @@
+exec
+main.o
+search.a
+search.o
