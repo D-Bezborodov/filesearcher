@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pthread -D PROGRAM_NAME=\"$(TARGET)\"
 
-TARGET = exec
+TARGET = App
 LIBRARY = libsearch_file.a
 
 LIB_SOURCES = search_file.c

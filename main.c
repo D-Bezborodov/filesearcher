@@ -18,13 +18,12 @@
  * ============================================================================================================
  * Things to Google: (Concurrency, Makefile, GCC, Static Library)
  */
+#include"search_file.h"
 #include<stddef.h>
 #include<iso646.h>
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
-#include<omp.h>
-#include"search_file.h"
 int main(int argc, char* argv[]){
   if (2 > argc) {
     printf("Usage: ./%s <searched_filename>\n", PROGRAM_NAME);
@@ -33,12 +32,6 @@ int main(int argc, char* argv[]){
     printf("Usage: ./%s 'searched filename'\n", PROGRAM_NAME);
     return 1;
   }
-  char* filename = argv[1];
-  char* path = search(filename);
-  if(NULL!=path){
-    printf("Path to the first found file named \"%s\" is: %s\n", filename, path);
-  } else {
-    printf("File named \"%s\" not found.\n", filename);
-  }
+  search(argv[1]);
   return 0;
 }
